@@ -1,0 +1,54 @@
+{
+  "name": "lipari-feux",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvo-crivello/lipari-feux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/salvo-crivello/lipari-feux/issues"
+  },
+  "homepage": "https://github.com/salvo-crivello/lipari-feux#readme",
+  "devDependencies": {
+    "@chromatic-com/storybook": "^5.0.0",
+    "@storybook/addon-a11y": "^10.1.11",
+    "@storybook/addon-docs": "^10.1.11",
+    "@storybook/addon-vitest": "^10.1.11",
+    "@storybook/react-vite": "^10.1.11",
+    "@types/node": "^25.0.9",
+    "@types/react": "^18.x",
+    "@types/react-dom": "^18.x",
+    "@vitejs/plugin-react": "^5.1.2",
+    "@vitest/browser-playwright": "^4.0.17",
+    "@vitest/coverage-v8": "^4.0.17",
+    "playwright": "^1.57.0",
+    "prop-types": "^15.8.1",
+    "storybook": "^10.1.11",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.17"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "autoprefixer": "^10.4.23",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "postcss": "^8.5.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.71.1",
+    "tailwindcss": "^4.1.18",
+    "zod": "^4.3.5"
+  }
+}
