@@ -5,13 +5,14 @@ import { cva } from "class-variance-authority";
 // ======================================================
 
 const buttonVariants = cva(
-  "group inline-flex items-center justify-center shrink-0 h-fit w-fit text-nowrap rounded-lg disabled:pointer-events-none disabled:opacity-60 transition-all duration-150 ease-in",
+  "group inline-flex items-center justify-center shrink-0 h-fit w-fit text-nowrap rounded-lg cursor-pointer disabled:pointer-events-none disabled:opacity-60 transition-all duration-150 ease-in",
   {
     variants: {
       variant: {
-        primary: "border border-black bg-black text-white hover:bg-black/90",
+        primary:
+          "border-2 border-primary bg-primary text-white hover:bg-primary-hover",
         secondary:
-          "border border-black bg-transparent text-black hover:bg-black/10",
+          "border-2 border-primary bg-transparent text-primary hover:bg-primary-hover/10",
       },
       size: {
         sm: "p-2",

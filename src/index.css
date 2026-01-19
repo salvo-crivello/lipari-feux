@@ -1,5 +1,13 @@
 @import "tailwindcss";
+@config "../tailwind.config.ts";
 
-@source "../index.html";
-@source "./**/*.{js,ts,jsx,tsx}";
-@source "../stories/**/*.{js,ts,jsx,tsx,mdx}";
+:root {
+  --color-primary: 24 23 45;
+  --color-primary-hover: 34 32 69;
+  --color-primary-focus: 45 43 95;
+  --color-primary-active: 18 17 36;
+}
+
+.deborder {
+  border: 1px solid red;
+}

@@ -1,0 +1,18 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"],
+    ["class:\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    [
+      "\"([^\"]*(?:flex|grid|bg-|text-|p-|m-|border|rounded|hover:|focus:)[^\"]*)\""
+    ]
+  ],
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "eslint.useFlatConfig": true
+}
