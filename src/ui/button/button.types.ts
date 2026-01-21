@@ -1,12 +1,17 @@
 import { VariantProps } from "class-variance-authority";
 import { ButtonHTMLAttributes, ElementType } from "react";
 import buttonVariants from "./Button.styles";
+import { HTMLMotionProps } from "motion/react";
 
-type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants> & {
-    icon?: ElementType;
-    iconPos?: "left" | "right";
-    text?: string;
-  };
+type TButtonVariants = VariantProps<typeof buttonVariants>;
 
-export type { TButtonProps };
+type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  icon?: ElementType;
+  iconPos?: "left" | "right";
+  text?: string;
+};
+type TButtonMotionProps = Omit<HTMLMotionProps<"button">, "ref">;
+
+type TButton = TButtonProps & TButtonVariants & TButtonMotionProps;
+
+export type { TButtonProps, TButtonVariants, TButtonMotionProps, TButton };

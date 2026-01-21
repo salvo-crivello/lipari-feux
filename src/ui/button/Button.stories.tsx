@@ -1,14 +1,18 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
-import { TButtonProps } from "./Button.types";
+import { TButton } from "./Button.types";
 import { UserCircle2 } from "lucide-react";
 
 // ======================================================
 // STORY CONFIGURATION
 // ======================================================
 
-const meta: Meta<TButtonProps & { useIcon: boolean }> = {
+type TButtonStoryArgs = TButton & {
+  useIcon?: boolean;
+};
+
+const meta: Meta<TButtonStoryArgs> = {
   title: "UI/Button",
   component: Button,
   tags: ["autodocs"],
@@ -24,46 +28,55 @@ const meta: Meta<TButtonProps & { useIcon: boolean }> = {
     text: { control: "text" },
     disabled: { control: "boolean" },
 
+    onClick: { action: "clicked" },
+
     useIcon: {
-      name: "use Icon props",
+      name: "Enable icon",
       control: "boolean",
-      table: { category: "Icon props", type: { detail: "boolean" } },
+      table: {
+        category: "Icon",
+      },
     },
 
     icon: {
-      control: "check",
-      table: { category: "Icon props" },
-      if: { arg: "useIcon" },
+      table: {
+        category: "Icon",
+        type: { summary: "React.ElementType" },
+      },
+      control: false,
     },
 
     iconPos: {
       control: "select",
       options: ["left", "right"],
-      table: { category: "Icon props" },
+      table: {
+        category: "Icon",
+      },
       if: { arg: "useIcon" },
     },
-
-    onClick: { action: "clicked" },
   },
 };
 
 export default meta;
 
-type TStory = StoryObj<TButtonProps>;
+type TStory = StoryObj<TButton>;
 
 // ======================================================
 // EDITABLE PLAYGROUND
 // ======================================================
 
-export const Playground: TStory = {
+export const Playground: StoryObj<TButtonStoryArgs> = {
   args: {
     variant: "primary",
     size: "md",
     text: "Click me",
-    icon: UserCircle2,
+    useIcon: true,
     iconPos: "left",
     disabled: false,
   },
+  render: ({ useIcon, ...args }) => (
+    <Button {...args} icon={useIcon ? UserCircle2 : undefined} />
+  ),
 };
 
 // ======================================================
@@ -75,7 +88,7 @@ export const Variants: TStory = {
     controls: { disable: true },
   },
   render: () => (
-    <div className="flex gap-3">
+    <div className="flex flex-wrap gap-3">
       <Button text="Click me!" />
       <Button text="Click me!" icon={UserCircle2} />
       <Button text="Click me!" icon={UserCircle2} iconPos="right" />
@@ -83,7 +96,3 @@ export const Variants: TStory = {
     </div>
   ),
 };
-
-// ======================================================
-// VARIANTS
-// ======================================================

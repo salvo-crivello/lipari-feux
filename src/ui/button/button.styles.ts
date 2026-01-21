@@ -1,9 +1,5 @@
 import { cva } from "class-variance-authority";
 
-// ======================================================
-// STYLES
-// ======================================================
-
 const buttonVariants = cva(
   "group inline-flex items-center justify-center shrink-0 h-fit w-fit text-nowrap rounded-lg cursor-pointer disabled:pointer-events-none disabled:opacity-60 transition-all duration-150 ease-in",
   {
