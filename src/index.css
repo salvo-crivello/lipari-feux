@@ -1,13 +1,36 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @config "../tailwind.config.ts";
 
+/* =====================================================*/
+/* Root color variables */
+/* =====================================================*/
+
 :root {
-  --color-primary: 24 23 45;
-  --color-primary-hover: 34 32 69;
-  --color-primary-focus: 45 43 95;
-  --color-primary-active: 18 17 36;
+	--color-background: 255 255 255;
+
+	--color-primary: 24 23 45;
+	--color-primary-hover: 34 32 69;
+	--color-primary-focus: 45 43 95;
+	--color-primary-active: 18 17 36;
 }
 
+[data-theme='dark'] {
+	--color-background: 34 35 37;
+
+	--color-primary: 130 139 255;
+	--color-primary-hover: 100 109 255;
+	--color-primary-focus: 80 89 255;
+	--color-primary-active: 150 159 255;
+}
+
+html {
+	background-color: rgb(var(--color-background));
+}
+
+/* =====================================================*/
+/* Debugging helper class */
+/* =====================================================*/
+
 .deborder {
-  border: 1px solid red;
+	border: 1px solid red;
 }
