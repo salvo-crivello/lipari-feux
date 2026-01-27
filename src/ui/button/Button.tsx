@@ -1,12 +1,11 @@
-import React from "react";
-import { TButton } from "./button.types";
-import clsx from "clsx";
-import { motion } from "motion/react";
 import {
   isBlankOrEmpty,
   isNotNullOrUndefined,
-} from "../../logic/utils/commonUtils";
+} from "@feux/logic/utils/commonUtils";
+import clsx from "clsx";
+import { motion } from "motion/react";
 import buttonVariants from "./button.styles";
+import { TButton } from "./button.types";
 
 function Button({
   className,

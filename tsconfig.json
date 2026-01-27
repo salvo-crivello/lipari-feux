@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "jsx": "react-jsx",
+
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": false,
+    "noEmit": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@feux/ui/*": ["src/ui/*"],
+      "@feux/logic/*": ["src/logic/*"],
+      "@feux/a11y/*": ["src/a11y/*"]
+    }
+  },
+
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "storybook-static"]
+}

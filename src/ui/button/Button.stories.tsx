@@ -1,8 +1,8 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
-import Button from "./Button";
 import { TButton } from "./button.types";
 import { UserCircle2 } from "lucide-react";
+import Button from "./Button";
 
 // ======================================================
 // STORY CONFIGURATION
@@ -75,7 +75,7 @@ export const Playground: StoryObj<TButtonStoryArgs> = {
     disabled: false,
   },
   render: ({ useIcon, ...args }) => (
-    <Button {...args} icon={useIcon ? UserCircle2 : undefined} />
+    <Button {...args} {...(useIcon && { icon: UserCircle2 })} />
   ),
 };
 
