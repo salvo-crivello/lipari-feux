@@ -1,5 +1,6 @@
 import {
   isBlankOrEmpty,
+  isNotBlankOrEmpty,
   isNotNullOrUndefined,
 } from "@feux/logic/utils/commonUtils";
 import clsx from "clsx";
@@ -20,6 +21,9 @@ function Button({
 
   return (
     <motion.button
+      aria-label={
+        isNotBlankOrEmpty(text) ? text : Icon ? "icon button" : "button"
+      }
       className={clsx(buttonVariants({ variant, size, onlyIcon }), className)}
       {...props}
     >

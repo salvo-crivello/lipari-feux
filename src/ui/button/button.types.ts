@@ -5,11 +5,21 @@ import buttonVariants from "./button.styles";
 
 type TButtonVariants = VariantProps<typeof buttonVariants>;
 
-type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  icon?: ElementType;
+type TButtonBase = ButtonHTMLAttributes<HTMLButtonElement> & {
   iconPos?: "left" | "right";
-  text?: string;
 };
+
+type TButtonWithText = TButtonBase & {
+  text: string;
+  icon?: ElementType;
+};
+
+type TButtonWithoutText = TButtonBase & {
+  text?: never;
+  icon: ElementType;
+};
+
+type TButtonProps = TButtonWithText | TButtonWithoutText;
 type TButtonMotionProps = Omit<HTMLMotionProps<"button">, "ref">;
 
 type TButton = TButtonProps & TButtonVariants & TButtonMotionProps;

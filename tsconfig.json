@@ -9,6 +9,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
 
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
+
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -31,6 +34,6 @@
     }
   },
 
-  "include": ["src"],
+  "include": ["src", ".storybook"],
   "exclude": ["node_modules", "dist", "storybook-static"]
 }
