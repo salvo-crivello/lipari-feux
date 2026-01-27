@@ -1,7 +1,7 @@
 import { VariantProps } from "class-variance-authority";
 import { ButtonHTMLAttributes, ElementType } from "react";
-import buttonVariants from "./Button.styles";
 import { HTMLMotionProps } from "motion/react";
+import buttonVariants from "./button.styles";
 
 type TButtonVariants = VariantProps<typeof buttonVariants>;
 

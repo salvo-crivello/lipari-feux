@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @config "../tailwind.config.ts";
 
 /* =====================================================*/
@@ -6,25 +6,103 @@
 /* =====================================================*/
 
 :root {
-	--color-background: 255 255 255;
+  /* Primary color scale */
+  --primary-50: 239 244 255;
+  --primary-100: 219 234 254;
+  --primary-200: 191 219 254;
+  --primary-300: 147 197 253;
+  --primary-400: 96 165 250;
+  --primary-500: 59 130 246;
+  --primary-600: 37 99 235;
+  --primary-700: 29 78 216;
+  --primary-800: 30 64 175;
+  --primary-900: 30 58 138;
+  /* Neutral color scale */
+  --neutral-50: 249 250 251;
+  --neutral-100: 243 244 246;
+  --neutral-200: 229 231 235;
+  --neutral-300: 209 213 219;
+  --neutral-400: 156 163 175;
+  --neutral-500: 107 114 128;
+  --neutral-600: 75 85 99;
+  --neutral-700: 55 65 81;
+  --neutral-800: 31 41 55;
+  --neutral-900: 17 24 39;
+  /* Success color scale */
+  --success-50: 236 253 245;
+  --success-100: 209 250 229;
+  --success-200: 167 243 208;
+  --success-300: 110 231 183;
+  --success-400: 52 211 153;
+  --success-500: 16 185 129;
+  --success-600: 5 150 105;
+  --success-700: 4 120 87;
+  --success-800: 6 95 70;
+  --success-900: 6 78 59;
+  /* Warning color scale */
+  --warning-50: 255 251 235;
+  --warning-100: 254 243 199;
+  --warning-200: 253 230 138;
+  --warning-300: 252 211 77;
+  --warning-400: 251 191 36;
+  --warning-500: 245 158 11;
+  --warning-600: 217 119 6;
+  --warning-700: 180 83 9;
+  --warning-800: 146 64 14;
+  --warning-900: 120 53 15;
+  /* Danger color scale */
+  --danger-50: 254 242 242;
+  --danger-100: 254 226 226;
+  --danger-200: 254 202 202;
+  --danger-300: 252 165 165;
+  --danger-400: 248 113 113;
+  --danger-500: 239 68 68;
+  --danger-600: 220 38 38;
+  --danger-700: 185 28 28;
+  --danger-800: 153 27 27;
+  --danger-900: 127 29 29;
+  /* Info color scale */
+  --info-50: 245 243 255;
+  --info-100: 237 233 254;
+  --info-200: 221 214 254;
+  --info-300: 196 181 253;
+  --info-400: 167 139 250;
+  --info-500: 139 92 246;
+  --info-600: 124 58 237;
+  --info-700: 109 40 217;
+  --info-800: 91 33 182;
+  --info-900: 76 29 149;
 
-	--color-primary: 24 23 45;
-	--color-primary-hover: 34 32 69;
-	--color-primary-focus: 45 43 95;
-	--color-primary-active: 18 17 36;
+  /* Theme specific colors */
+  --color-bg: 255 255 255;
+  --color-bg-subtle: 249 250 251;
+  --color-surface: 255 255 255;
+  --color-border: 229 231 235;
+
+  --color-text: 249 250 251;
+  --color-text-muted: 156 163 175;
+
+  --color-primary: 37 99 235;
+  --color-primary-hover: 29 78 216;
+  --color-focus: 96 165 250;
 }
 
-[data-theme='dark'] {
-	--color-background: 34 35 37;
+[data-theme="dark"] {
+  --color-bg: 15 23 42;
+  --color-bg-subtle: 2 6 23;
+  --color-surface: 2 6 23;
+  --color-border: 31 41 55;
 
-	--color-primary: 130 139 255;
-	--color-primary-hover: 100 109 255;
-	--color-primary-focus: 80 89 255;
-	--color-primary-active: 150 159 255;
+  --color-text: 17 24 39;
+  --color-text-muted: 107 114 128;
+
+  --color-primary: 96 165 250;
+  --color-primary-hover: 147 197 253;
+  --color-focus: 191 219 254;
 }
 
 html {
-	background-color: rgb(var(--color-background));
+  background-color: rgb(var(--color-bg));
 }
 
 /* =====================================================*/
@@ -32,5 +110,5 @@ html {
 /* =====================================================*/
 
 .deborder {
-	border: 1px solid red;
+  border: 1px solid red;
 }

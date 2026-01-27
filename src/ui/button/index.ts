@@ -1,2 +1,2 @@
 export { default as Button } from "./Button";
-export type { TButton } from "./Button.types";
+export type { TButton } from "./button.types";

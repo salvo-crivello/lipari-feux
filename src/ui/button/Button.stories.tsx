@@ -1,7 +1,7 @@
 import React from "react";
 import { Meta, StoryObj } from "@storybook/react";
 import Button from "./Button";
-import { TButton } from "./Button.types";
+import { TButton } from "./button.types";
 import { UserCircle2 } from "lucide-react";
 
 // ======================================================
