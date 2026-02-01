@@ -76,25 +76,49 @@
   /* Theme specific colors */
   --color-bg: 255 255 255;
   --color-bg-subtle: 249 250 251;
-  --color-surface: 255 255 255;
+
+  --color-surface-0: 249 250 251;
+  --color-surface-1: 243 244 246;
+  --color-surface-2: 229 231 235;
+  --color-surface-3: 209 213 219;
+
   --color-border: 229 231 235;
+  --color-border-hover: 209 213 219;
+  --color-border-focus: 147 197 253;
 
   --color-text: 249 250 251;
   --color-text-muted: 156 163 175;
 
+  --color-text-on-bg: 17 24 39;
+  --color-text-muted-on-bg: 107 114 128;
+  --color-text-on-primary: 249 250 251;
+  --color-text-muted-on-primary: 156 163 175;
+
   --color-primary: 37 99 235;
   --color-primary-hover: 29 78 216;
-  --color-focus: 96 165 250;
+  --color-primary-focus: 96 165 250;
 }
 
 [data-theme="dark"] {
-  --color-bg: 15 23 42;
-  --color-bg-subtle: 2 6 23;
-  --color-surface: 2 6 23;
+  --color-bg: 2 6 16;
+  --color-bg-subtle: 15 23 42;
+
+  --color-surface-0: 8 14 28;
+  --color-surface-1: 15 23 42;
+  --color-surface-2: 24 32 56;
+  --color-surface-3: 36 48 78;
+
   --color-border: 31 41 55;
+  --color-border-hover: 55 65 81;
+  --color-border-focus: 29 78 216;
 
   --color-text: 17 24 39;
   --color-text-muted: 107 114 128;
+
+  --color-text-on-bg: 249 250 251;
+  --color-text-muted-on-bg: 156 163 175;
+  --color-text-on-primary: 17 24 39;
+  --color-text-muted-on-primary: 107 114 128;
 
   --color-primary: 96 165 250;
   --color-primary-hover: 147 197 253;

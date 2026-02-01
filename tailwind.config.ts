@@ -86,10 +86,26 @@ export default {
         },
         background: "rgb(var(--color-bg) / <alpha-value>)",
         "background-subtle": "rgb(var(--color-bg-subtle) / <alpha-value>)",
-        surface: "rgb(var(--color-surface) / <alpha-value>)",
-        border: "rgb(var(--color-border) / <alpha-value>)",
+        surface: {
+          DEFAULT: "rgb(var(--color-surface-0) / <alpha-value>)",
+          0: "rgb(var(--color-surface-0) / <alpha-value>)",
+          1: "rgb(var(--color-surface-1) / <alpha-value>)",
+          2: "rgb(var(--color-surface-2) / <alpha-value>)",
+          3: "rgb(var(--color-surface-3) / <alpha-value>)",
+        },
+        border: {
+          DEFAULT: "rgb(var(--color-border) / <alpha-value>)",
+          hover: "rgb(var(--color-border-hover) / <alpha-value>)",
+          focus: "rgb(var(--color-border-focus) / <alpha-value>)",
+        },
         text: "rgb(var(--color-text) / <alpha-value>)",
         "text-muted": "rgb(var(--color-text-muted) / <alpha-value>)",
+        "text-on-bg": "rgb(var(--color-text-on-bg) / <alpha-value>)",
+        "text-muted-on-bg":
+          "rgb(var(--color-text-muted-on-bg) / <alpha-value>)",
+        "text-on-primary": "rgb(var(--color-text-on-primary) / <alpha-value>)",
+        "text-muted-on-primary":
+          "rgb(var(--color-text-muted-on-primary) / <alpha-value>)",
       },
     },
   },

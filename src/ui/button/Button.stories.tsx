@@ -97,19 +97,19 @@ export const Variants: TStory = {
 };
 
 // ======================================================
-// STATUS VARIANTS
+// TEST VARIANTS
 // ======================================================
 
-export const StatusVariants: TStory = {
-  parameters: {
-    controls: { disable: true },
-  },
-  render: () => (
-    <div className="flex flex-wrap gap-3">
-      <Button text="" />
-      <Button text="second" icon={UserCircle2} disabled />
-      <Button icon={UserCircle2} iconPos="right" />
-      <Button icon={UserCircle2} />
-    </div>
-  ),
-};
+// export const TestStatusVariants: TStory = {
+//   parameters: {
+//     controls: { disable: true },
+//   },
+//   render: () => (
+//     <div className="flex flex-wrap gap-3">
+//       <Button text="" />
+//       <Button text="second" icon={UserCircle2} disabled />
+//       <Button icon={UserCircle2} iconPos="right" />
+//       <Button icon={UserCircle2} />
+//     </div>
+//   ),
+// };
