@@ -32,6 +32,7 @@ export const Playground: StoryObj<TInputStoryArgs> = {
     <InputGroup {...args}>
       <InputGroup.Label>Label</InputGroup.Label>
       <InputGroup.InputText placeholder="Type here..." />
+      <InputGroup.Message variant="danger">error message</InputGroup.Message>
     </InputGroup>
   ),
 };
@@ -65,6 +66,22 @@ export const Variants: TStory = {
           icon={Search}
           iconPos="right"
         />
+      </InputGroup>
+      <InputGroup>
+        <InputGroup.Label>Label</InputGroup.Label>
+        <InputGroup.Textarea placeholder="Type here..." />
+      </InputGroup>
+      <InputGroup variant="secondary">
+        <InputGroup.Label>Label</InputGroup.Label>
+        <InputGroup.Textarea placeholder="Type here..." />
+      </InputGroup>
+      <InputGroup>
+        <InputGroup.Label>Label</InputGroup.Label>
+        <InputGroup.InputPassword placeholder="Type your password..." />
+      </InputGroup>
+      <InputGroup variant="secondary">
+        <InputGroup.Label>Label</InputGroup.Label>
+        <InputGroup.InputPassword placeholder="Type your password..." />
       </InputGroup>
     </div>
   ),

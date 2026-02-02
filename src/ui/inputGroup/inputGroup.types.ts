@@ -1,7 +1,13 @@
-import { ElementType, HtmlHTMLAttributes, InputHTMLAttributes } from "react";
+import {
+  ElementType,
+  HTMLAttributes,
+  HtmlHTMLAttributes,
+  InputHTMLAttributes,
+} from "react";
 import {
   inputGroupVariants,
   inputLabelVariants,
+  inputMessageVariants,
   inputTextVariants,
 } from "./inputGroup.styles";
 import { VariantProps } from "class-variance-authority";
@@ -34,6 +40,24 @@ type TInputText = TInputTextProps & TInputTextVariants;
 
 // ====================================================
 
+type TInputTextareaVariants = VariantProps<typeof inputTextVariants>;
+type TInputTextareaProps = InputHTMLAttributes<HTMLTextAreaElement>;
+type TInputTextarea = TInputTextareaProps & TInputTextareaVariants;
+
+// ====================================================
+
+type TInputPasswordVariants = VariantProps<typeof inputTextVariants>;
+type TInputPasswordProps = InputHTMLAttributes<HTMLInputElement>;
+type TInputPassword = TInputPasswordProps & TInputPasswordVariants;
+
+// ====================================================
+
+type TInputMessageVariants = VariantProps<typeof inputMessageVariants>;
+type TInputMessageProps = HTMLAttributes<HTMLSpanElement>;
+type TInputMessage = TInputMessageProps & TInputMessageVariants;
+
+// ====================================================
+
 export type {
   TInputGroup,
   TInputGroupProps,
@@ -43,4 +67,13 @@ export type {
   TInputTextVariants,
   TInputTextProps,
   TInputText,
+  TInputTextareaVariants,
+  TInputTextareaProps,
+  TInputTextarea,
+  TInputPasswordVariants,
+  TInputPasswordProps,
+  TInputPassword,
+  TInputMessageVariants,
+  TInputMessageProps,
+  TInputMessage,
 };
